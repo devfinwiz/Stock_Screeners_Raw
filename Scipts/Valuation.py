@@ -1,3 +1,5 @@
+'''Determines valuation of a stock based upon its book value and its annual sales.'''
+
 import csv
 import traceback
 from itertools import zip_longest
