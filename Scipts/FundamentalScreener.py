@@ -1,9 +1,8 @@
+'''Filters stocks trading at 10% discount to their book value. Discount amount filtering in % is flexible.'''
+
 import csv
-import numpy
 from itertools import zip_longest
 from yahoofinancials import YahooFinancials
-import smtplib
-import math
 from more_itertools import unique_everseen
 
 
