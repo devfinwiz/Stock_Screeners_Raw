@@ -1,4 +1,5 @@
 '''Make sure to turn on less secure apps on from youur Gmail's settings under security section before executing this script.'''
+'''Mail any output csv files to anyone with a click. '''
 
 import smtplib
 import mimetypes
@@ -11,10 +12,10 @@ from email.mime.image import MIMEImage
 from email.mime.text import MIMEText
 
 emailfrom = '"DEV_FINWIZ"'
-emailto = "devjuneja43@gmail.com"
+emailto = "receiver's email"
 fileToSend = "Auto generated Dataset\Discount_Sales.csv"
-username = "devjuneja43@gmail.com"
-password = "devjuneja#24"
+username = "sender's email id"
+password = "sender's password here"
 
 msg = MIMEMultipart()
 msg["From"] = emailfrom
