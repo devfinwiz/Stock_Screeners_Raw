@@ -1,3 +1,5 @@
+'''Filter stocks trading at a discount based on their book value parameter and also that are trading lower than their fair value based on their annual sales.'''
+
 import csv
 import traceback
 import numpy
