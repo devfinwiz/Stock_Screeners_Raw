@@ -1,4 +1,4 @@
-'''Determines valuation of a stock based upon its book value and its annual sales.'''
+'''Determines exact valuation of a stock based upon its book value and its annual sales.'''
 
 import csv
 import traceback
