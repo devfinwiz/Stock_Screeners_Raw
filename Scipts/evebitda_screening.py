@@ -1,3 +1,5 @@
+'''Filters stock trading with attractive Ev/Editda financial ratio'''
+
 import csv
 import traceback
 import numpy
