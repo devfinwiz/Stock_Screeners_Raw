@@ -1,3 +1,5 @@
+'''Auto coded candlestick recogntion with talib combined with technical strategies for educational purposes.'''
+
 import talib
 import numpy
 import csv
