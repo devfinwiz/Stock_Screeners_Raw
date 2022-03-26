@@ -1,3 +1,5 @@
+'''Filter involving P/S only'''
+
 import csv
 import traceback
 from itertools import zip_longest
