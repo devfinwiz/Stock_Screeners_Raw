@@ -1,7 +1,7 @@
 '''Run this script right after execution of FinancialsExtractor is finished. The objective of this script is to fix the rows with dummy data where the data was insufficiently downloaded. '''
+'''Replaces "" with 22222 as dummy data in the output file'''
 
 import csv
-import numpy
 
 f=open("Auto generated Dataset\FinancialsBunch.csv","w",newline="") 
 
