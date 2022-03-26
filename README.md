@@ -28,7 +28,7 @@
              3.3.1 -> Outputs a csv file with complete data after fixing the previous output csv file. (FinancialsBunch.csv)
              
 
-4} Fundamental Screening of stocks to sort the undervalued list of stocks based on two criterias: 
+4} Fundamental Screening of stocks to sort the undervalued list of stocks based on three criterias: 
 
       4.1 -> Picks the list of stocks that are trading n% below their book value where n is variable indicating amount of percentage. (FundamentalScreener.py)
       
