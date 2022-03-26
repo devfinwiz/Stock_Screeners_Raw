@@ -69,6 +69,8 @@
 
 ### Note:
 
+### Before beginning, place the Tickers.csv from Scripts directory to Auto Generated Dataset directory as it got truncated due to large amount of dataset generated initially. 
+
 Before executing the scripts, make sure to turn on 'Less Secure App access' option from your gmail ID that will be used to send out the mails. To do so, get going with the following steps:
 
 > 1.Log into the Gmail account that will be used to send the emails.
