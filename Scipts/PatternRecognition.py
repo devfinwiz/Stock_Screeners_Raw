@@ -1,5 +1,7 @@
+'''Spotting candlestick chart pattern collectively for all stocks automatically. Formulas coded manually.'''
+
 import csv
-import talib
+
 import numpy
 from itertools import zip_longest
 
