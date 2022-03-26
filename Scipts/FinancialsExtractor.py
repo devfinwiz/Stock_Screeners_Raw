@@ -1,3 +1,5 @@
+'''Complete financial data extraction concurrently and storing them in a csv collectively for further operations.'''
+
 from yahoofinancials import YahooFinancials
 import csv
 import concurrent.futures
@@ -6,7 +8,7 @@ from datetime import date
 from itertools import zip_longest
 import numpy
 
-'''Line 110-161 are required as backup only in case the close values are being not fetched correctly.'''
+'''Line 120-171 are required as backup only in case the close values are being not fetched correctly.'''
 
 symbol=0
 remover=list()
