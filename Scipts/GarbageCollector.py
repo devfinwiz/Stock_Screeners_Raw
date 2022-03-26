@@ -1,4 +1,5 @@
 '''Run this script after execution of CSVGenerator is completed. The sole objective of this script is to filter the tickers whose data is insufficient on YFinance.'''
+'''Removes tickers that are delisted from the exchange and updates Tickers.csv'''
 
 from os import listdir
 import csv
