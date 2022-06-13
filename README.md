@@ -91,7 +91,7 @@ Before executing the scripts, make sure to turn on 'Less Secure App access' opti
 > 6. talib
 > 7. cufflinks
 
-### Installation can be done using the pip command. (Example: pip install numpy)
+### Installation can be done using the pip command. (Example: pip install pandas)
 
 
 ## Inbuilt libraries required:
