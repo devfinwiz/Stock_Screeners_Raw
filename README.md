@@ -1,5 +1,4 @@
 # Automated Stock Screeners 
-[![visits](https://github-visit-counter.herokuapp.com/devfinwiz/github-visit-counter/visits.svg)](#)
 
 ![REALTY PREDICTION](https://user-images.githubusercontent.com/78873223/152916600-9e02b1a7-97a6-4c48-b9c0-33895086b9b4.png)
 
