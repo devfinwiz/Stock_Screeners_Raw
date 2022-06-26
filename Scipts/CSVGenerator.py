@@ -1,6 +1,5 @@
 '''Fetches data for all the listed stock tickers on NSE and segregates the data in csv file for each ticker automatically.'''
 
-from concurrent.futures import thread
 import yfinance as yf 
 import csv
 

@@ -28,7 +28,7 @@
              3.3.1 -> Outputs a csv file with complete data after fixing the previous output csv file. (FinancialsBunch.csv)
              
 
-4} Fundamental Screening of stocks to sort the undervalued list of stocks based on two criterias: 
+4} Fundamental Screening of stocks to sort the undervalued list of stocks based on three criterias: 
 
       4.1 -> Picks the list of stocks that are trading n% below their book value where n is variable indicating amount of percentage. (FundamentalScreener.py)
       
@@ -69,6 +69,8 @@
 
 ### Note:
 
+### Before beginning, place the Tickers.csv from Scripts directory to Auto Generated Dataset directory as it got truncated due to large amount of dataset generated initially. 
+
 Before executing the scripts, make sure to turn on 'Less Secure App access' option from your gmail ID that will be used to send out the mails. To do so, get going with the following steps:
 
 > 1.Log into the Gmail account that will be used to send the emails.
@@ -89,7 +91,7 @@ Before executing the scripts, make sure to turn on 'Less Secure App access' opti
 > 6. talib
 > 7. cufflinks
 
-### Installation can be done using the pip command. (Example: pip install numpy)
+### Installation can be done using the pip command. (Example: pip install pandas)
 
 
 ## Inbuilt libraries required:
