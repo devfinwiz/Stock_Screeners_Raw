@@ -1,4 +1,4 @@
-'''Complete financial data extraction concurrently, storing them in csv collectively for further operations. On line 54, make sure to slice tickers appropriately by using indexses from Tickers.csv. Data extraction altogether will produce undesired results.'''
+'''Complete financial data extraction concurrently and storing them in csv collectively for further operations. On line 54, make sure to slice tickers appropriately by using indexses from Tickers.csv. Data extraction altogether will produce undesired results.'''
 
 from yahoofinancials import YahooFinancials
 import csv
