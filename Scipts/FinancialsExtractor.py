@@ -1,4 +1,4 @@
-'''Complete financial data extraction concurrently and storing them in a csv collectively for further operations.'''
+'''Complete financial data extraction concurrently and storing them in a csv collectively for further operations. On line 54, make sure to slice tickers appropriately by using indexses from Tickers.csv. Data extraction altogether will produce undesired results.'''
 
 from yahoofinancials import YahooFinancials
 import csv
@@ -51,7 +51,7 @@ def book_value_computer(ticker):
 
 with concurrent.futures.ThreadPoolExecutor() as executor:
  
-    tickers=tickers_list[700:1243]
+    tickers=tickers_list[200:400]
     results=executor.map(book_value_computer,tickers)
 
     ticker_results=list()
