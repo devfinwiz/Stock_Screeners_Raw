@@ -6,24 +6,15 @@ import concurrent.futures
 import yfinance as yf 
 from datetime import date
 from itertools import zip_longest
-import numpy
 
-'''Line 120-171 are required as backup only in case the close values are being not fetched correctly.'''
 
 symbol=0
 remover=list()
 tickers_list=list()
 
-comp=csv.reader(open("Auto generated Dataset\Tickers.csv"))
-
-for c in comp:
-    tickers_list.extend(c)
-
-def book_value_computer(ticker):
+def financials_fetcher(ticker):
 
         try:
-            #d=date.today()
-            #d1=d.strftime('%Y-%m-%d')
 
             yahoo_financials=YahooFinancials(ticker)
             hold=yahoo_financials.get_key_statistics_data()
@@ -49,73 +40,71 @@ def book_value_computer(ticker):
         except:
             return ticker,None,None,None,None,None,None,None,None
 
-with concurrent.futures.ThreadPoolExecutor() as executor:
- 
-    tickers=tickers_list[200:400]
-    results=executor.map(book_value_computer,tickers)
 
-    ticker_results=list()
-    tickers_book_value=list()
-    tickers_evtoebitda=list()
-    tickers_priceToBook=list()
-    tickers_close=list()
-    tickers_marketcap=list()
-    tickers_priceToSales=list()
-    tickers_sharesoutstanding=[]
-    tickers_total_revenue=[]
+#----------------------------------------------------------------------------------------------------------
+#Preparation of key financial ratios dataset for all tickers using thread pool executors for quicker output
 
-    for result in results:
-             
-                ticker_results.append(result[0])
-                tickers_book_value.append(result[1])
-                tickers_evtoebitda.append(result[2])
-                tickers_priceToBook.append(result[3])
-                tickers_marketcap.append(result[4])
-                tickers_priceToSales.append(result[5])
-                tickers_close.append(result[6])
-                tickers_sharesoutstanding.append(result[7])
-                tickers_total_revenue.append(result[8])
+def thread_pool_executor():
 
-                #tickers_close.append(result[2])
+    comp=csv.reader(open("Auto generated Dataset\Tickers.csv"))
 
-                #print(ticker_results)
-                #print(tickers_book_value)
-                #print(tickers_evtoebitda)
-                #print(tickers_priceToBook)
-                #print(tickers_close)
-#print("\n")
-#print("Final Outcome: ---------------------------------------------------------------------------------------------------")
-#print("\n")
-#print(ticker_results)
-#print(tickers_book_value)
-#print(tickers_evtoebitda)
-#print(tickers_priceToBook)
-#print(tickers_marketcap)
-#print(tickers_close)
+    for c in comp:
+        tickers_list.extend(c)
 
-list_clubber=[ticker_results,tickers_book_value,tickers_evtoebitda,tickers_priceToBook,tickers_marketcap,tickers_priceToSales,tickers_close,tickers_sharesoutstanding,tickers_total_revenue]
-export_data=zip_longest(*list_clubber,fillvalue='')
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+    
+        tickers=tickers_list[200:400]
+        results=executor.map(financials_fetcher,tickers)
 
-with open("Auto generated Dataset\Financials.csv",'a',encoding="ISO-8859-1",newline='') as myfile:
-    wr=csv.writer(myfile)
-    #wr.writerow(("Ticker","Book Value"))
-    wr.writerows(export_data)
-myfile.close()
+        ticker_results=list()
+        tickers_book_value=list()
+        tickers_evtoebitda=list()
+        tickers_priceToBook=list()
+        tickers_close=list()
+        tickers_marketcap=list()
+        tickers_priceToSales=list()
+        tickers_sharesoutstanding=[]
+        tickers_total_revenue=[]
 
-holder=list()
+        for result in results:
+                
+                    ticker_results.append(result[0])
+                    tickers_book_value.append(result[1])
+                    tickers_evtoebitda.append(result[2])
+                    tickers_priceToBook.append(result[3])
+                    tickers_marketcap.append(result[4])
+                    tickers_priceToSales.append(result[5])
+                    tickers_close.append(result[6])
+                    tickers_sharesoutstanding.append(result[7])
+                    tickers_total_revenue.append(result[8])
 
-with open("Auto generated Dataset\Financials.csv",'r') as f:
-    csvreader=csv.reader(f)
-    for row in csvreader:
-        holder.append(row)
-        if not row[1]:
-            holder.remove(row)
 
-with open("Auto generated Dataset\Financials.csv",'w',newline='') as fw:
-    writer=csv.writer(fw)
-    writer.writerows(holder) 
-print("Success")
+    list_clubber=[ticker_results,tickers_book_value,tickers_evtoebitda,tickers_priceToBook,tickers_marketcap,tickers_priceToSales,tickers_close,tickers_sharesoutstanding,tickers_total_revenue]
+    export_data=zip_longest(*list_clubber,fillvalue='')
 
+    with open("Auto generated Dataset\Financials.csv",'a',encoding="ISO-8859-1",newline='') as myfile:
+        wr=csv.writer(myfile)
+        #wr.writerow(("Ticker","Book Value"))
+        wr.writerows(export_data)
+    myfile.close()
+
+    holder=list()
+
+    with open("Auto generated Dataset\Financials.csv",'r') as f:
+        csvreader=csv.reader(f)
+        for row in csvreader:
+            holder.append(row)
+            if not row[1]:
+                holder.remove(row)
+
+    with open("Auto generated Dataset\Financials.csv",'w',newline='') as fw:
+        writer=csv.writer(fw)
+        writer.writerows(holder) 
+    print("Success")
+
+
+#------------------------------------------------------------------------------------------------------------------------------
+#The below commented piece of code is written as backup for sitation where the close prices are not being updated appropriately. 
 
 '''ticker_names_reader=list()
 ticker_book_values_reader=list()
@@ -170,65 +159,3 @@ with open("Auto generated Dataset\Financials.csv",'w',encoding="ISO-8859-1",newl
     wr.writerows(export_data_complete)
 myfile.close()
 '''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''holder=list()
-
-with open('Financials.csv','r') as f:
-    csvreader=csv.reader(f)
-    for row in csvreader:
-        holder.append(row)
-        if not row[1]:
-            holder.remove(row)
-
-with open('Financials.csv','w',newline='') as fw:
-    writer=csv.writer(fw)
-    writer.writerows(holder)'''
-
-
-            
-
-            
-
-
-
-        
-    
-        
-
-
-
-'''ticker="ADANITRANS.NS"
-yahoo_financials=YahooFinancials(ticker)
-hold=yahoo_financials.get_key_statistics_data()
-print(hold)
-
-print(hold['ADANITRANS.NS']['bookValue'])'''
-
-
