@@ -3,18 +3,28 @@
 import yfinance as yf 
 import csv
 
-comp=csv.reader(open("Auto generated Dataset\Tickers.csv"))
+def dataset_generator():
 
-for c in comp:
+    #-------------------------------------------------------------
+    #Tickers.csv has the list of symbols of all NSE listed tickers
 
-    symbol=c[0]
+    comp=csv.reader(open("Prerequisites-Outputs\Tickers.csv"))     
+    for c in comp:
 
-    history_filename="Auto generated Dataset\{}.csv".format(symbol)
+        symbol=c[0]
 
-    f=open(history_filename,'w',newline="")
+        #Creation of individual CSVs for all listed tickers in Tickers.csv
 
-    ticker=yf.Ticker(symbol)
-    df=ticker.history(period='1mo')
-    f.write(df.to_csv())
-    f.close()
-print("Execution successful")
+        history_filename="Auto generated Dataset\{}.csv".format(symbol)  
+        f=open(history_filename,'w',newline="")
+
+        #---------------------------------------------------------------------------------
+        #Data being fetched from yfinance an then being written in individual Ticker's CSV
+
+        ticker=yf.Ticker(symbol)
+        df=ticker.history(period='1mo')
+        f.write(df.to_csv())
+        f.close()
+
+    print("Dataset Generation Complete")
+
