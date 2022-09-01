@@ -1,4 +1,4 @@
-# Automated Stock Screeners
+# Automated Stock Screeners 
 
 ![REALTY PREDICTION](https://user-images.githubusercontent.com/78873223/152916600-9e02b1a7-97a6-4c48-b9c0-33895086b9b4.png)
 
@@ -65,6 +65,8 @@
 
 8} Provision to mail the necessary output files at a single click is available. (Mailer.py)
 
+
+---
 
 
 ### Note:

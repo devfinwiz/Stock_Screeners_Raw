@@ -58,37 +58,3 @@ server.login(username,password)
 server.sendmail(emailfrom, emailto, msg.as_string())
 print("Success")
 server.quit()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''import smtplib
-
-s=smtplib.SMTP("smtp.gmail.com",587)
-
-s.starttls()
-
-s.login("devjuneja43@gmail.com","devjuneja#24")
-
-message="Yo, demo mail from dj!"
-
-s.sendmail("devjuneja43@gmail.com","devjuneja43@gmail.com",message)
-
-s.quit()'''
