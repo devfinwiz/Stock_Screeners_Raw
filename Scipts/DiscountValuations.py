@@ -2,12 +2,9 @@
 
 import csv
 import traceback
-import numpy
 from itertools import zip_longest
 from sympy import Q
 from yahoofinancials import YahooFinancials
-import smtplib
-import math
 from more_itertools import unique_everseen
 
 tickers_name=list()
