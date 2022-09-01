@@ -1,9 +1,10 @@
 # D&V's Finance Wizard 
+![](https://i.imgur.com/waxVImv.png) 
 
 ![Capture1](https://user-images.githubusercontent.com/78873223/188002666-57db1f7d-d218-4e30-a44b-1c93b9c05d86.PNG)
 ![Capture](https://user-images.githubusercontent.com/78873223/188002660-f481b318-d9fa-46b9-b817-eee6d0641315.PNG)
 
-
+![](https://i.imgur.com/waxVImv.png)
 ## This is a finance repository that currently does the following:
 
 
@@ -70,8 +71,9 @@
 
 ---
 
-
+![](https://i.imgur.com/waxVImv.png)
 ### Note:
+
 
 ### Before beginning, place the Tickers.csv from Scripts directory to Auto Generated Dataset directory as it got truncated due to large amount of dataset generated initially. 
 
@@ -84,8 +86,9 @@ Before executing the scripts, make sure to turn on 'Less Secure App access' opti
 > 3.Set the Allow less secure apps option to ON.
 
 
-
+![](https://i.imgur.com/waxVImv.png)
 ## Libraries to be installed:
+
 
 > 1. yfinance
 > 2. yahoofinancials
@@ -97,8 +100,9 @@ Before executing the scripts, make sure to turn on 'Less Secure App access' opti
 
 ### Installation can be done using the pip command. (Example: pip install pandas)
 
-
+![](https://i.imgur.com/waxVImv.png)
 ## Inbuilt libraries required:
+
 
 > 1. datetime
 > 2. csv
