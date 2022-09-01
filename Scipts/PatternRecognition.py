@@ -1,9 +1,15 @@
 '''Spotting candlestick chart pattern collectively for all stocks automatically. Formulas coded manually.'''
 
 import csv
-
 import numpy
 from itertools import zip_longest
+
+gravestone=[]
+dateeee=[]
+bearishengulf=[]
+dateee=[]
+bullishengulf=[]
+datee=[]
 
 def is_bullish_candlestick(candle):
     return float(candle['Close']>candle['Open'])
@@ -47,7 +53,7 @@ def is_gravestone_doji(candles,index):
 
     return False
 
-def pattern_recognition(candles,index):
+def pattern_recognition_initializer(candles,index):
     current_day=candles[index]
 
     open=current_day['Open']
@@ -61,70 +67,65 @@ def pattern_recognition(candles,index):
     close=numpy.array(close,dtype=float)
     
 
-symbols_file=open("Auto generated Dataset\Tickers.csv")
-tickers=csv.reader(symbols_file)
+def pattern_recognition():
+    symbols_file=open("Auto generated Dataset\Tickers.csv")
+    tickers=csv.reader(symbols_file)
 
-for company in tickers:
-    #print(company)
+    for company in tickers:
+        #print(company)
 
-    ticker=company[0]
+        ticker=company[0]
 
-    history_file=open("Auto generated Dataset\{}.csv".format(ticker))
+        history_file=open("Auto generated Dataset\{}.csv".format(ticker))
 
-    reader=csv.DictReader(history_file)
-    candles=list(reader)
+        reader=csv.DictReader(history_file)
+        candles=list(reader)
 
-    candles=candles[-2:]
+        candles=candles[-2:]
 
-    if len(candles)>1:
-        if is_bullish_engulfing(candles,1):
-            print("{} = {} is bullish engulfing".format(ticker,candles[1]['Date']))
-            print("------------------------------------------------")
-            bullishengulf=[]
-            datee=[]
-            bullishengulf.append("{}".format(ticker))
-            datee.append("{}".format(candles[1]['Date']))
+        if len(candles)>1:
+            if is_bullish_engulfing(candles,1):
+                print("{} = {} is bullish engulfing".format(ticker,candles[1]['Date']))
+                print("------------------------------------------------")
+                bullishengulf.append("{}".format(ticker))
+                datee.append("{}".format(candles[1]['Date']))
 
-        if is_bearish_engulfing(candles,1):
-            print("{} = {} is bearish engulfing".format(ticker,candles[1]['Date']))
-            print("------------------------------------------------")
-            bearishengulf=[]
-            dateee=[]
-            bearishengulf.append("{}".format(ticker))
-            dateee.append("{}".format(candles[1]['Date']))
+            if is_bearish_engulfing(candles,1):
+                print("{} = {} is bearish engulfing".format(ticker,candles[1]['Date']))
+                print("------------------------------------------------")
+                bearishengulf.append("{}".format(ticker))
+                dateee.append("{}".format(candles[1]['Date']))
 
-        if is_gravestone_doji(candles,1):
-            print("{} = {} is gravestone doji".format(ticker,candles[1]['Date']))
-            print("------------------------------------------------")
-            gravestone=[]
-            dateeee=[]
-            gravestone.append("{}".format(ticker))
-            dateeee.append("{}".format(candles[1]['Date']))
+            if is_gravestone_doji(candles,1):
+                print("{} = {} is gravestone doji".format(ticker,candles[1]['Date']))
+                print("------------------------------------------------")
+                gravestone.append("{}".format(ticker))
+                dateeee.append("{}".format(candles[1]['Date']))
 
-        pattern_recognition(candles,1)
-    
-list_clubber=[bullishengulf,datee]
-export_data_complete=zip_longest(*list_clubber,fillvalue='')
+            pattern_recognition_initializer(candles,1)
+        
+    list_clubber=[bullishengulf,datee]
+    export_data_complete=zip_longest(*list_clubber,fillvalue='')
 
-with open("Auto generated Dataset\BullishEngulfing.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
-    wr=csv.writer(myfile)
-    wr.writerow(("Ticker","Date Of Formation"))
-    wr.writerows(export_data_complete)
+    with open("Auto generated Dataset\BullishEngulfing.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
+        wr=csv.writer(myfile)
+        wr.writerow(("Ticker","Date Of Formation"))
+        wr.writerows(export_data_complete)
 
-list_clubberr=[bearishengulf,dateee]
-export_data_completee=zip_longest(*list_clubberr,fillvalue='')
+    list_clubberr=[bearishengulf,dateee]
+    export_data_completee=zip_longest(*list_clubberr,fillvalue='')
 
-with open("Auto generated Dataset\BearishEngulfing.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
-    wr=csv.writer(myfile)
-    wr.writerow(("Ticker","Date Of Formation"))
-    wr.writerows(export_data_completee)
+    with open("Auto generated Dataset\BearishEngulfing.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
+        wr=csv.writer(myfile)
+        wr.writerow(("Ticker","Date Of Formation"))
+        wr.writerows(export_data_completee)
 
-list_clubberrr=[gravestone,dateeee]
-export_data_completeee=zip_longest(*list_clubberrr,fillvalue='')
+    list_clubberrr=[gravestone,dateeee]
+    export_data_completeee=zip_longest(*list_clubberrr,fillvalue='')
 
-with open("Auto generated Dataset\Gravestone.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
-    wr=csv.writer(myfile)
-    wr.writerow(("Ticker","Date Of Formation"))
-    wr.writerows(export_data_completeee)
+    with open("Auto generated Dataset\Gravestone.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
+        wr=csv.writer(myfile)
+        wr.writerow(("Ticker","Date Of Formation"))
+        wr.writerows(export_data_completeee)
 
     
