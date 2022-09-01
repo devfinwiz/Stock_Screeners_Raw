@@ -1,6 +1,8 @@
-# Automated Stock Screeners 
+# D&V's Finance Wizard 
 
-![REALTY PREDICTION](https://user-images.githubusercontent.com/78873223/152916600-9e02b1a7-97a6-4c48-b9c0-33895086b9b4.png)
+![Capture1](https://user-images.githubusercontent.com/78873223/188002666-57db1f7d-d218-4e30-a44b-1c93b9c05d86.PNG)
+![Capture](https://user-images.githubusercontent.com/78873223/188002660-f481b318-d9fa-46b9-b817-eee6d0641315.PNG)
+
 
 ## This is a finance repository that currently does the following:
 
