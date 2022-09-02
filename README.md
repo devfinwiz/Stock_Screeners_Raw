@@ -1,7 +1,10 @@
-# Automated Stock Screeners 
+# <img src="https://readme-typing-svg.herokuapp.com?color=greencd32&size=30&width=950&height=70&lines=DevFinwiz's-Finance-Wizard"/>
+![](https://i.imgur.com/waxVImv.png) 
 
-![REALTY PREDICTION](https://user-images.githubusercontent.com/78873223/152916600-9e02b1a7-97a6-4c48-b9c0-33895086b9b4.png)
+![Capture1](https://user-images.githubusercontent.com/78873223/188002666-57db1f7d-d218-4e30-a44b-1c93b9c05d86.PNG)
+![Capture](https://user-images.githubusercontent.com/78873223/188002660-f481b318-d9fa-46b9-b817-eee6d0641315.PNG)
 
+![](https://i.imgur.com/waxVImv.png)
 ## This is a finance repository that currently does the following:
 
 
@@ -68,10 +71,11 @@
 
 ---
 
-
+![](https://i.imgur.com/waxVImv.png)
 ### Note:
 
-### Before beginning, place the Tickers.csv from Scripts directory to Auto Generated Dataset directory as it got truncated due to large amount of dataset generated initially. 
+### Driver Script development which enables UI integration for the entire project is currently in progress...
+
 
 Before executing the scripts, make sure to turn on 'Less Secure App access' option from your gmail ID that will be used to send out the mails. To do so, get going with the following steps:
 
@@ -82,8 +86,9 @@ Before executing the scripts, make sure to turn on 'Less Secure App access' opti
 > 3.Set the Allow less secure apps option to ON.
 
 
-
+![](https://i.imgur.com/waxVImv.png)
 ## Libraries to be installed:
+
 
 > 1. yfinance
 > 2. yahoofinancials
@@ -95,8 +100,9 @@ Before executing the scripts, make sure to turn on 'Less Secure App access' opti
 
 ### Installation can be done using the pip command. (Example: pip install pandas)
 
-
+![](https://i.imgur.com/waxVImv.png)
 ## Inbuilt libraries required:
+
 
 > 1. datetime
 > 2. csv
