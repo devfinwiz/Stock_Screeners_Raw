@@ -68,7 +68,7 @@ def pattern_recognition_initializer(candles,index):
     
 
 def pattern_recognition():
-    symbols_file=open("Auto generated Dataset\Tickers.csv")
+    symbols_file=open("Prerequisites-Outputs\Tickers.csv")
     tickers=csv.reader(symbols_file)
 
     for company in tickers:
@@ -107,7 +107,7 @@ def pattern_recognition():
     list_clubber=[bullishengulf,datee]
     export_data_complete=zip_longest(*list_clubber,fillvalue='')
 
-    with open("Auto generated Dataset\BullishEngulfing.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
+    with open("Prerequisites-Outputs\BullishEngulfing.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
         wr=csv.writer(myfile)
         wr.writerow(("Ticker","Date Of Formation"))
         wr.writerows(export_data_complete)
@@ -115,7 +115,7 @@ def pattern_recognition():
     list_clubberr=[bearishengulf,dateee]
     export_data_completee=zip_longest(*list_clubberr,fillvalue='')
 
-    with open("Auto generated Dataset\BearishEngulfing.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
+    with open("Prerequisites-Outputs\BearishEngulfing.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
         wr=csv.writer(myfile)
         wr.writerow(("Ticker","Date Of Formation"))
         wr.writerows(export_data_completee)
@@ -123,7 +123,7 @@ def pattern_recognition():
     list_clubberrr=[gravestone,dateeee]
     export_data_completeee=zip_longest(*list_clubberrr,fillvalue='')
 
-    with open("Auto generated Dataset\Gravestone.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
+    with open("Prerequisites-Outputs\Gravestone.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
         wr=csv.writer(myfile)
         wr.writerow(("Ticker","Date Of Formation"))
         wr.writerows(export_data_completeee)

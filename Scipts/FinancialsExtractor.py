@@ -46,7 +46,7 @@ def financials_fetcher(ticker):
 
 def thread_pool_executor():
 
-    comp=csv.reader(open("Auto generated Dataset\Tickers.csv"))
+    comp=csv.reader(open("Prerequisites-Outputs\Tickers.csv"))
 
     for c in comp:
         tickers_list.extend(c)

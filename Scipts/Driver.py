@@ -9,6 +9,7 @@ import tkinter.messagebox
 import customtkinter
 from PIL import Image, ImageTk
 import os
+
 customtkinter.set_appearance_mode("System")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
@@ -253,7 +254,65 @@ class App(customtkinter.CTk):
         self.button_16.place(relx=0.6,rely=0.9)
 
 
+        # ============ frame_right ============
+      
+        """self.combobox_1 = customtkinter.CTkComboBox(master=self.frame_right,
+                                                    values=["Value 1", "Value 2"])
+        self.combobox_1.grid(row=6, column=2, columnspan=1, pady=10, padx=20, sticky="we")"""
 
+       
+        self.entry = customtkinter.CTkEntry(master=self.frame_right,
+                                            width=120,
+                                            placeholder_text="Enter Ticker")
+        self.entry.grid(row=8, column=0, columnspan=2, pady=20, padx=20, sticky="we")
+
+        self.button_7 = customtkinter.CTkButton(master=self.frame_right,
+                                                text="Fetch Valuation",
+                                                border_width=2,  # <- custom border_width
+                                                fg_color="#3d86a8",  # <- no fg_color
+                                                command=self.button_event)
+        self.button_7.grid(row=8, column=2, columnspan=1, pady=20, padx=20, sticky="we")
+
+
+        # ============ frame_new ============
+
+        # configure grid layout (1x1)
+        self.frame_new.grid_rowconfigure(0, minsize=10)   # empty row with minsize as spacing
+        self.frame_new.grid_rowconfigure(7, weight=1)  # empty row as spacing
+        self.frame_new.grid_rowconfigure(8, minsize=20)    # empty row with minsize as spacing
+        self.frame_new.grid_rowconfigure(11, minsize=10)  
+        
+        self.button_1 = customtkinter.CTkButton(master=self.frame_new,
+                                                text="CSV Generator",
+                                                command=self.button_event,fg_color="#3d86a8")
+        self.button_1.grid(row=1, column=0, pady=10, padx=20)
+
+        self.button_3 = customtkinter.CTkButton(master=self.frame_new,
+                                                text="Financials Generator",
+                                                command=self.button_event,fg_color="#3d86a8")
+        self.button_3.grid(row=2, column=0, pady=10, padx=20)
+
+        self.button_8 = customtkinter.CTkButton(master=self.frame_new,
+                                                text="Mailer",
+                                                command=self.button_event,fg_color="#3d86a8")
+        self.button_8.grid(row=3, column=0, pady=10, padx=20)
+
+        self.button_9 = customtkinter.CTkButton(master=self.frame_new,
+                                                text="Available Tickers",
+                                                command=self.button_event,fg_color="#3d86a8")
+        self.button_9.grid(row=8, column=0, pady=10, padx=20)
+
+        self.button_2 = customtkinter.CTkButton(master=self.frame_new,
+                                                text="Garbage Collector",
+                                                command=self.button_event,fg_color="#3d86a8")
+        self.button_2.grid(row=9, column=0, pady=10, padx=20)
+
+       
+
+        self.button_6 = customtkinter.CTkButton(master=self.frame_new,
+                                                text="Financial Garbage Collector",
+                                                command=self.button_event,fg_color="#3d86a8")
+        self.button_6.grid(row=10, column=0, pady=10, padx=20)
 
     
         # set default values
