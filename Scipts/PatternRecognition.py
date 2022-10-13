@@ -71,13 +71,16 @@ def pattern_recognition():
     symbols_file=open("Prerequisites-Outputs\Tickers.csv")
     tickers=csv.reader(symbols_file)
 
+    
     for company in tickers:
         #print(company)
 
         ticker=company[0]
-
-        history_file=open("Auto generated Dataset\{}.csv".format(ticker))
-
+        try:
+            history_file=open("Auto generated Dataset\{}.csv".format(ticker))
+        except:
+            continue
+        
         reader=csv.DictReader(history_file)
         candles=list(reader)
 
@@ -128,4 +131,4 @@ def pattern_recognition():
         wr.writerow(("Ticker","Date Of Formation"))
         wr.writerows(export_data_completeee)
 
-    
+pattern_recognition()
