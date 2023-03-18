@@ -1,0 +1,12 @@
+cufflinks==0.17.3
+customtkinter==4.5.10
+matplotlib==3.2.1
+more_itertools==8.7.0
+numpy==1.18.5
+pandas==1.0.5
+Pillow==9.4.0
+plotly==5.3.1
+sympy==1.8
+TA_Lib==0.4.18
+yahoofinancials==1.14
+yfinance==0.1.63
