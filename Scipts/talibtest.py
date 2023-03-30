@@ -170,11 +170,15 @@ def marsibull():
     ma34=talib.EMA(close,timeperiod=34)
     ma200=talib.EMA(close,timeperiod=200)
 
-    if(close[-1]>ma5[-1] and close[-1]>ma22[-1] and ma5[-1]>ma22[-1]):
-            if(rsibull(-1)):
-                if(close[-2]<ma5[-2] and close[-2]<ma22[-2] and close[-3]<ma5[-3] and close[-3]<ma22[-3] and close[-4]<ma5[-4] and 
-                   close[-4]<ma22[-4] and close[-5]<ma5[-5] and close[-5]<ma22[-5]):
-                    print(ticker, " Bull Criteria met")
+    if(
+        (close[-1]>ma5[-1] and close[-1]>ma22[-1]
+        and ma5[-1]>ma22[-1])
+        and (rsibull(-1))
+        and (close[-2]<ma5[-2] and close[-2]<ma22[-2] and close[-3]<ma5[-3] and close[-3]<ma22[-3] and close[-4]<ma5[-4] and 
+       close[-4]<ma22[-4] and close[-5]<ma5[-5]
+        and close[-5]<ma22[-5])
+    ):
+        print(ticker, " Bull Criteria met")
 
 def marsibear():
     ma5=talib.EMA(close,timeperiod=5)
@@ -182,11 +186,15 @@ def marsibear():
     ma34=talib.EMA(close,timeperiod=34)
     ma200=talib.EMA(close,timeperiod=200)
     
-    if(close[-1]<ma5[-1] and close[-1]<ma22[-1] and ma5[-1]<ma22[-1]):
-            if(rsibear(-1)):
-                if(close[-2]>ma5[-2] and close[-2]>ma22[-2] and close[-3]>ma5[-3] and close[-3]>ma22[-3] and close[-4]>ma5[-4] and 
-                   close[-4]>ma22[-4] and close[-5]>ma5[-5] and close[-5]>ma22[-5]):
-                    print(ticker, " Bear Criteria met")
+    if(
+        (close[-1]<ma5[-1] and close[-1]<ma22[-1]
+        and ma5[-1]<ma22[-1])
+        and (rsibear(-1))
+        and (close[-2]>ma5[-2] and close[-2]>ma22[-2] and close[-3]>ma5[-3] and close[-3]>ma22[-3] and close[-4]>ma5[-4] and 
+       close[-4]>ma22[-4] and close[-5]>ma5[-5]
+        and close[-5]>ma22[-5])
+    ):
+        print(ticker, " Bear Criteria met")
 
 a = 0
 
