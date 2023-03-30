@@ -196,7 +196,7 @@ for company in tickers:
         try:
                 with open("Auto generated Dataset\\{}.csv".format(ticker)) as csv_file:
                                 csv_object=csv.reader(csv_file)
-                                hold=list()
+                                hold=[]
                                 for line in csv_object:
                                         if first:
                                                 first = False

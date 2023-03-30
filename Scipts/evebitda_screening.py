@@ -6,11 +6,11 @@ from itertools import zip_longest
 from yahoofinancials import YahooFinancials
 from more_itertools import unique_everseen
 
-tickers_name=list()
-tickers_PTS=list()
-tickers_EV=list()
-tickers_bookval=list()
-tickers_close=list()
+tickers_name=[]
+tickers_PTS=[]
+tickers_EV=[]
+tickers_bookval=[]
+tickers_close=[]
 
 #--------------------------------------------------------------------------------------------------------
 #Filters stocks with EV/EBITDA ratio in range 0-10, stores the resultant dataset in EVToEbitda_Output.csv

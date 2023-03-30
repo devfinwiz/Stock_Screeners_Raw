@@ -7,8 +7,8 @@ from sympy import Q
 from yahoofinancials import YahooFinancials
 from more_itertools import unique_everseen
 
-tickers_name=list()
-tickers_close=list()
+tickers_name=[]
+tickers_close=[]
 tickers_percent=[]
 tickers_vabv=[]
 tickers_vas=[]
