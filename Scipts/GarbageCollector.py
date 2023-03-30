@@ -35,7 +35,7 @@ def garbage_collector():
             if(len(csv_dict)<2):
                 hold.append(name)
 
-    with open("Prerequisites-Outputs\Tickers.csv",'r',newline='') as f:
+    with open(r"Prerequisites-Outputs\Tickers.csv",'r',newline='') as f:
         reader=csv.reader(f)
         data=list(reader)
         #print(data)
@@ -66,6 +66,6 @@ def garbage_collector():
     #for check in hold:
         #os.remove(check)
 
-    with open("Prerequisites-Outputs\Tickers.csv",'w',newline='') as f:
+    with open(r"Prerequisites-Outputs\Tickers.csv",'w',newline='') as f:
         writer=csv.writer(f)
         writer.writerows(lstoflst)

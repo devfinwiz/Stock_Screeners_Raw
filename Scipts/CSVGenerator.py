@@ -8,14 +8,14 @@ def dataset_generator():
     #-------------------------------------------------------------
     #Tickers.csv has the list of symbols of all NSE listed tickers
 
-    comp=csv.reader(open("Prerequisites-Outputs\Tickers.csv"))     
+    comp=csv.reader(open(r"Prerequisites-Outputs\Tickers.csv"))     
     for c in comp:
 
         symbol=c[0]
 
         #Creation of individual CSVs for all listed tickers in Tickers.csv
 
-        history_filename="Auto generated Dataset\{}.csv".format(symbol)  
+        history_filename=r"Auto generated Dataset\{}.csv".format(symbol)  
         f=open(history_filename,'w',newline="")
 
         #---------------------------------------------------------------------------------

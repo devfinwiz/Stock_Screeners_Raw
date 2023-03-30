@@ -14,7 +14,7 @@ tickers_vabv=[]
 tickers_vas=[]
 
 def discount_as_per_bv():
-    with open("Auto generated Dataset\Valuations.csv",'r') as mf:
+    with open(r"Auto generated Dataset\Valuations.csv",'r') as mf:
         data=csv.DictReader(mf)
 
         for row in data:
@@ -41,7 +41,7 @@ def store(l1,l2,l3,l4,filename,aim): #aim: Valuation-Book Value or Valuation - S
     list_clubber=[l1,l2,l3,l4]
     export_data_complete=zip_longest(*list_clubber,fillvalue='')
 
-    with open("Auto generated Dataset\{}.csv".format(filename),'w',encoding="ISO-8859-1",newline="") as myfile:
+    with open(r"Auto generated Dataset\{}.csv".format(filename),'w',encoding="ISO-8859-1",newline="") as myfile:
         wr=csv.writer(myfile)
         wr.writerow(("Ticker",aim,"LTP","Discount(%)"))
         wr.writerows(export_data_complete)
@@ -55,7 +55,7 @@ discount_as_per_bv()
 
 
 def discount_as_per_sales():
-    with open("Auto generated Dataset\Valuations.csv",'r') as mf:
+    with open(r"Auto generated Dataset\Valuations.csv",'r') as mf:
         data=csv.DictReader(mf)
 
         for row in data:

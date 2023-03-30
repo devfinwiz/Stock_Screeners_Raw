@@ -16,7 +16,7 @@ tickers_close=list()
 #Filters stocks with attractive P/S of below 1.25 value
 
 def pts_filter():
-    with open("Auto generated Dataset\FinancialsBunch.csv",'r') as mf:
+    with open(r"Auto generated Dataset\FinancialsBunch.csv",'r') as mf:
         data=csv.DictReader(mf)
 
         for row in data:
@@ -41,7 +41,7 @@ def pts_filter():
     list_clubber=[tickers_name,tickers_MCap,tickers_PTS,tickers_close,tickers_bookval]
     export_data_complete=zip_longest(*list_clubber,fillvalue='')
 
-    with open("Auto generated Dataset\MCapPTS.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
+    with open(r"Auto generated Dataset\MCapPTS.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
         wr=csv.writer(myfile)
         wr.writerow(("Ticker","Market Cap","P/S","LTP","Book Value"))
         wr.writerows(export_data_complete)

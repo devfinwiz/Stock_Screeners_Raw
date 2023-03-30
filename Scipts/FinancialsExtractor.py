@@ -46,7 +46,7 @@ def financials_fetcher(ticker):
 
 def thread_pool_executor():
 
-    comp=csv.reader(open("Prerequisites-Outputs\Tickers.csv"))
+    comp=csv.reader(open(r"Prerequisites-Outputs\Tickers.csv"))
 
     for c in comp:
         tickers_list.extend(c)
@@ -82,7 +82,7 @@ def thread_pool_executor():
     list_clubber=[ticker_results,tickers_book_value,tickers_evtoebitda,tickers_priceToBook,tickers_marketcap,tickers_priceToSales,tickers_close,tickers_sharesoutstanding,tickers_total_revenue]
     export_data=zip_longest(*list_clubber,fillvalue='')
 
-    with open("Auto generated Dataset\Financials.csv",'a',encoding="ISO-8859-1",newline='') as myfile:
+    with open(r"Auto generated Dataset\Financials.csv",'a',encoding="ISO-8859-1",newline='') as myfile:
         wr=csv.writer(myfile)
         #wr.writerow(("Ticker","Book Value"))
         wr.writerows(export_data)
@@ -90,14 +90,14 @@ def thread_pool_executor():
 
     holder=list()
 
-    with open("Auto generated Dataset\Financials.csv",'r') as f:
+    with open(r"Auto generated Dataset\Financials.csv",'r') as f:
         csvreader=csv.reader(f)
         for row in csvreader:
             holder.append(row)
             if not row[1]:
                 holder.remove(row)
 
-    with open("Auto generated Dataset\Financials.csv",'w',newline='') as fw:
+    with open(r"Auto generated Dataset\Financials.csv",'w',newline='') as fw:
         writer=csv.writer(fw)
         writer.writerows(holder) 
     print("Success")

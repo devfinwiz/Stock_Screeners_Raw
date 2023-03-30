@@ -46,7 +46,7 @@ tickers_gre_50_bookval=list()
 #Filters stocks that are trading 10% discount to their book value as compared to Last Traded Price
 
 def book_value_filter():
-    with open("Auto generated Dataset\Financials.csv",'r') as mf:
+    with open(r"Auto generated Dataset\Financials.csv",'r') as mf:
         data=csv.DictReader(mf)
 
         for row in data:
@@ -67,11 +67,11 @@ def book_value_filter():
     list_clubber_final_50=[tickers_gre_50,tickers_gre_50_bookval,tickers_gre_50_close]
     export_data_complete_50=zip_longest(*list_clubber_final_50,fillvalue='')
 
-    with open("Auto generated Dataset\Filtered_50_percent.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
+    with open(r"Auto generated Dataset\Filtered_50_percent.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
         wr=csv.writer(myfile)
         wr.writerow(("Ticker","Book Value","LTP"))
         wr.writerows(export_data_complete_50)
                 
-    with open("Auto generated Dataset\Filtered_50_percent.csv",'r') as f,open('Filtered_50_percentt.csv','w') as out_file:
+    with open(r"Auto generated Dataset\Filtered_50_percent.csv",'r') as f,open('Filtered_50_percentt.csv','w') as out_file:
         out_file.writelines(unique_everseen(f))
 

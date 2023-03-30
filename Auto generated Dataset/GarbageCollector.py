@@ -24,7 +24,7 @@ for name in fn:
             hold.append(name)
 print(hold)
 
-with open("Auto generated Dataset\Tickers.csv",'r',newline='') as f:
+with open(r"Auto generated Dataset\Tickers.csv",'r',newline='') as f:
     reader=csv.reader(f)
     data=list(reader)
     #print(data)
@@ -53,7 +53,7 @@ lstoflst=conLiToLiOfLi(hold3)
 #for check in hold:
     #os.remove(check)
 
-with open("Auto generated Dataset\Tickers.csv",'w',newline='') as f:
+with open(r"Auto generated Dataset\Tickers.csv",'w',newline='') as f:
     writer=csv.writer(f)
     writer.writerows(lstoflst)
     
