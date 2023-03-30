@@ -31,7 +31,7 @@ def garbage_collector():
     hold3=[]
     for name in fn:
         with open(name,'r') as csvfile:
-            csv_dict=[row for row in csv.DictReader(csvfile)]
+            csv_dict=list(csv.DictReader(csvfile))
             if(len(csv_dict)<2):
                 hold.append(name)
 
