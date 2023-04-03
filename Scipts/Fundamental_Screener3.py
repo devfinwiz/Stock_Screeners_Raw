@@ -6,11 +6,11 @@ from itertools import zip_longest
 from yahoofinancials import YahooFinancials
 from more_itertools import unique_everseen
 
-tickers_name=list()
-tickers_PTS=list()
-tickers_MCap=list()
-tickers_bookval=list()
-tickers_close=list()
+tickers_name=[]
+tickers_PTS=[]
+tickers_MCap=[]
+tickers_bookval=[]
+tickers_close=[]
 
 #------------------------------------------------------
 #Filters stocks with attractive P/S of below 1.25 value

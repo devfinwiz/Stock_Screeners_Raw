@@ -38,9 +38,9 @@ with open("Auto generated Dataset\Filtered.csv",'w',encoding="ISO-8859-1",newlin
     wr.writerow(("Ticker","Book Value","LTP"))
     wr.writerows(export_data_complete)'''
 
-tickers_gre_50=list()
-tickers_gre_50_close=list()
-tickers_gre_50_bookval=list()
+tickers_gre_50=[]
+tickers_gre_50_close=[]
+tickers_gre_50_bookval=[]
 
 #-------------------------------------------------------------------------------------------------
 #Filters stocks that are trading 10% discount to their book value as compared to Last Traded Price

@@ -9,8 +9,8 @@ from itertools import zip_longest
 
 
 symbol=0
-remover=list()
-tickers_list=list()
+remover=[]
+tickers_list=[]
 
 def financials_fetcher(ticker):
 
@@ -56,13 +56,13 @@ def thread_pool_executor():
         tickers=tickers_list[200:400]
         results=executor.map(financials_fetcher,tickers)
 
-        ticker_results=list()
-        tickers_book_value=list()
-        tickers_evtoebitda=list()
-        tickers_priceToBook=list()
-        tickers_close=list()
-        tickers_marketcap=list()
-        tickers_priceToSales=list()
+        ticker_results=[]
+        tickers_book_value=[]
+        tickers_evtoebitda=[]
+        tickers_priceToBook=[]
+        tickers_close=[]
+        tickers_marketcap=[]
+        tickers_priceToSales=[]
         tickers_sharesoutstanding=[]
         tickers_total_revenue=[]
 
@@ -88,7 +88,7 @@ def thread_pool_executor():
         wr.writerows(export_data)
     myfile.close()
 
-    holder=list()
+    holder=[]
 
     with open("Auto generated Dataset\Financials.csv",'r') as f:
         csvreader=csv.reader(f)
