@@ -15,7 +15,7 @@ latest_close=[]
 #Computes fair value for all tickers as per their book value and as per their annual sales
 
 def valuation_computer():
-    with open("Auto generated Dataset\FinancialsBunch.csv",'r') as mf:
+    with open(r"Auto generated Dataset\FinancialsBunch.csv",'r') as mf:
         data=csv.DictReader(mf)
 
         for row in data:
@@ -50,7 +50,7 @@ def valuation_computer():
     list_clubber=[tickers,val_as_per_bv,val_as_per_pts,latest_close]
     export_data_complete=zip_longest(*list_clubber,fillvalue='')
 
-    with open("Auto generated Dataset\Valuations.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
+    with open(r"Auto generated Dataset\Valuations.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
         wr=csv.writer(myfile)
         wr.writerow(("Ticker","Valuation As Per Book Value","Valuation As Per Sales","LTP"))
         wr.writerows(export_data_complete)

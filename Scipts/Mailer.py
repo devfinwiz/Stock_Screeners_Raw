@@ -17,7 +17,7 @@ from email.mime.text import MIMEText
 def mailer(emailto,fileToSend,username,password):
     emailfrom = '"DEV_FINWIZ"'
     emailto = "receiver's email"
-    fileToSend = "Auto generated Dataset\Discount_Sales.csv"
+    fileToSend = r"Auto generated Dataset\Discount_Sales.csv"
     username = "sender's email id"
     password = "sender's password here"
 

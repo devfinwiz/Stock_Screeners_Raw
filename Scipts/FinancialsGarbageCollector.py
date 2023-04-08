@@ -8,9 +8,9 @@ import csv
 
 def fgarbage_collector():
 
-   f=open("Auto generated Dataset\FinancialsBunch.csv","w",newline="") 
+   f=open(r"Auto generated Dataset\FinancialsBunch.csv","w",newline="") 
 
-   with open('Auto generated Dataset\Financials.csv',"r+") as mf:
+   with open(r'Auto generated Dataset\Financials.csv',"r+") as mf:
       data=csv.DictReader(mf)
       wr=csv.writer(f)
       wr.writerow(("Ticker","Book Value","EVToEBITDA","PToBV","MarketCap","PToSales","Close","Shares Outstanding","Revenue"))

@@ -16,7 +16,7 @@ tickers_close=[]
 #Filters stocks with EV/EBITDA ratio in range 0-10, stores the resultant dataset in EVToEbitda_Output.csv
 
 def ev_ebitda_filter():
-    with open("Auto generated Dataset\FinancialsBunch.csv",'r') as mf:
+    with open(r"Auto generated Dataset\FinancialsBunch.csv",'r') as mf:
         data=csv.DictReader(mf)
 
         for row in data:
@@ -41,7 +41,7 @@ def ev_ebitda_filter():
     list_clubber=[tickers_name,tickers_EV,tickers_PTS,tickers_close,tickers_bookval]
     export_data_complete=zip_longest(*list_clubber,fillvalue='')
 
-    with open("Prerequisites-Outputs\EVToEbitda_Output.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
+    with open(r"Prerequisites-Outputs\EVToEbitda_Output.csv",'w',encoding="ISO-8859-1",newline="") as myfile:
         wr=csv.writer(myfile)
         wr.writerow(("Ticker","EVToEBITDA","P/S","LTP","Book Value"))
         wr.writerows(export_data_complete)

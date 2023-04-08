@@ -26,7 +26,7 @@ class App(customtkinter.CTk):
         self.geometry(f"{App.WIDTH}x{App.HEIGHT}")
         self.protocol("WM_DELETE_WINDOW", self.on_closing)  # call .on_closing() when app gets closed
 
-        self.bell_image = self.load_image("Prerequisites-Outputs\LOGOn.PNG",130,70)
+        self.bell_image = self.load_image(r"Prerequisites-Outputs\LOGOn.PNG",130,70)
 
         # ============ create two frames ============
 

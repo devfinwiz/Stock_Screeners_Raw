@@ -4,7 +4,7 @@ import talib
 import numpy
 import csv
     
-symbols_file=open("Auto generated Dataset\Tickers.csv",'r')
+symbols_file=open(r"Auto generated Dataset\Tickers.csv",'r')
 tickers=csv.reader(symbols_file)
 
 def can_strat(openn,high,low,close):

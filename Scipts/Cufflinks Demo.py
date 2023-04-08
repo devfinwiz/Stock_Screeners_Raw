@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 
 
 cf.set_config_file(theme='pearl',sharing='public',offline=True)
-apple_df = pd.read_csv('Auto generated Dataset\ABFRL.NS.csv', index_col=0, parse_dates=True)
+apple_df = pd.read_csv(r'Auto generated Dataset\ABFRL.NS.csv', index_col=0, parse_dates=True)
 
 qf=cf.QuantFig(apple_df,title='ABFRL Quant Figure',legend='top',name='GS')
 qf.add_bollinger_bands()
