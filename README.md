@@ -1,4 +1,4 @@
-# <img src="https://readme-typing-svg.herokuapp.com?color=greencd32&size=30&width=950&height=70&lines=DevFinwiz's-Finance-Wizard"/>
+# <img src="https://readme-typing-svg.herokuapp.com?color=greencd32&size=30&width=950&height=70&lines=Stock-Screener-Raw"/>
 ![](https://i.imgur.com/waxVImv.png) 
 
 ![Capture1](https://user-images.githubusercontent.com/78873223/188002666-57db1f7d-d218-4e30-a44b-1c93b9c05d86.PNG)
