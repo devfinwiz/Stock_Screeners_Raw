@@ -1,11 +1,47 @@
 # <img src="https://readme-typing-svg.herokuapp.com?color=greencd32&size=30&width=950&height=70&lines=Stock-Screener-Raw"/>
 ![](https://i.imgur.com/waxVImv.png) 
 
+## Parent Repository Details: 
+<p align="center">
+<img width="458" alt="N2" src="https://user-images.githubusercontent.com/78873223/225271710-28960aeb-8bb4-475d-8c4c-af323fe4b222.PNG">
+</p>
+<div align="center">
+      
+[![Repository Link - Fin-Maestro](https://img.shields.io/badge/Repository_Link-Fin--Maestro-2ea44f)](https://https://github.com/devfinwiz/Fin-Maestro)
+
+</div>
+
+<p align="center">
+  <a href="https://www.codefactor.io/repository/github/devfinwiz/fin-maestro">
+    <img src="https://img.shields.io/badge/CodeFactor-A-blue&?style=for-the-badge&color=blue">
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/badge/Python-3.10.11-blue&?style=for-the-badge&color=blue">
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/badge/Vue.js-3-blue&?style=for-the-badge&color=blue">
+  </a>
+  <a href="https://github.com/devfinwiz/Fin-Maestro/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/devfinwiz/Fin-Maestro?color=maroon&style=for-the-badge">
+  </a>
+  <a href="https://github.com/devfinwiz/Fin-Maestro/commits/master">
+    <img src="https://img.shields.io/github/last-commit/devfinwiz/Fin-Maestro?color=yellow&style=for-the-badge">
+  </a>
+  <a href="https://github.com/devfinwiz/Fin-Maestro/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/devfinwiz/Fin-Maestro?color=indigo&style=for-the-badge">
+  </a>
+  <a href="https://github.com/devfinwiz/Fin-Maestro/issues">
+    <img src="https://img.shields.io/github/issues-raw/devfinwiz/Fin-Maestro?color=indigo&style=for-the-badge">
+  </a>
+</p><br>
+
+![](https://i.imgur.com/waxVImv.png) 
+
 ![Capture1](https://user-images.githubusercontent.com/78873223/188002666-57db1f7d-d218-4e30-a44b-1c93b9c05d86.PNG)
 ![Capture](https://user-images.githubusercontent.com/78873223/188002660-f481b318-d9fa-46b9-b817-eee6d0641315.PNG)
 
 ![](https://i.imgur.com/waxVImv.png)
-## This is a finance repository that currently does the following:
+## This is a child/basic finance repository that currently does the following:
 
 
 1}Data fetching for Stocks listed on NSE India with automatic csv generation for individual ticker.(CSVGenerator.py)
