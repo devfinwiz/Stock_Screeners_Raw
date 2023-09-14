@@ -7,7 +7,7 @@
 </p>
 <div align="center">
       
-[![Repository Link - Fin-Maestro](https://img.shields.io/badge/Repository_Link-Fin--Maestro-2ea44f)](https://https://github.com/devfinwiz/Fin-Maestro)
+[![Repository Link - Fin-Maestro](https://img.shields.io/badge/Repository_Link-Fin--Maestro-2ea44f)](https://github.com/devfinwiz/Fin-Maestro-Web)
 
 </div>
 
